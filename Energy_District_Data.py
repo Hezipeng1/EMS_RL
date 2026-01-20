@@ -18,7 +18,7 @@ class EnergyDistrictData:
         """
         
         try:
-            with open(config_file, "r") as file:
+            with open(config_file, "r", encoding="utf-8") as file:
                 self.config = yaml.safe_load(file)
                 self.actor_lookup = {actor["name"]: actor for actor in self.config["actors"]} 
             self.initialize_vpplib_env(self.config["general"])
