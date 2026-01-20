@@ -19,7 +19,7 @@ class EnergyDistrictEnvironment(gym.Env):
             config_file (str): The path to the YAML configuration file containing simulation parameters.
         """
         
-        with open(config_file, "r") as file:
+        with open(config_file, "r", encoding="utf-8") as file:
             print("EnergyDistrictEnvironment wird initialisiert")
             
             self.config = yaml.safe_load(file)
